@@ -7,13 +7,13 @@ int iswanshu(int x)
 	{
 		if (x % i == 0) 
 		{
-			count++;
+			count=count+i;
 		}
 	}
-	if (count == 0)
+	if (count == x )
 		return 1;
 	else
-		return count;
+		return 0;
 }
 void wanshu() 
 {
@@ -21,9 +21,9 @@ void wanshu()
 	scanf("%d %d", &m, &n);
 	for (int i = m; i <= n; i++) 
 	{
-		if (iswanshu(i) != 1)
+		if (iswanshu(i) == 1)
 		{
-			int flag = 1;
+			flag = 1;
 			printf("%d = 1",i);
 			for (int j = 2; j <= i - 1; j++)
 			{
